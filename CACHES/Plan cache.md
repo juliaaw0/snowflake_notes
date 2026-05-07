@@ -1,0 +1,3 @@
+[[CACHES]]
+
+ [[Plan cache]] - Plan Cache przechowuje "gotowy przepis" na wykonanie konkretnego zapytania. Jeśli Twoja aplikacja wysyła tysiące razy to samo zapytanie (np. SELECT * FROM orders WHERE id = ?), Snowflake pomija etap myślenia ("przetłumaczenia" na instrukcje zrozumiałe dla procesora (kompilacja, optymalizacja, wybór indeksów)) i od razu przechodzi do działania. Cel: zmniejszenie narzutu kompilacji (compilation overhead)

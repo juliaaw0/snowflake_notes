@@ -1,0 +1,2 @@
+
+Snowpark-optimized [[WAREHOUSES]] are recommended for running Snowpark workloads such as code that has large memory requirements or dependencies on a specific CPU architecture. The default configuration for a Snowpark-optimized warehouse provides 16x memory per node compared to a standard warehouse.

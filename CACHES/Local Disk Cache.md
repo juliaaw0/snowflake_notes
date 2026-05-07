@@ -1,0 +1,3 @@
+[[CACHES]]
+
+as a virtual warehouse processes a query, it creates a [[local disk cache]] called Warehouse Cache. A virtual warehouse may re-use the warehouse cache for query processing. This cache is local to the virtual warehouse executing the query, and any other virtual warehouses cannot see it. If the virtual warehouse is suspended or deleted, this cache will also be removed. Size of cache is relative to warehouse size
