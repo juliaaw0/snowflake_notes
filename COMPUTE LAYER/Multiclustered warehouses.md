@@ -66,18 +66,7 @@ Który tryb minimalizuje koszty przy burstach? → ECONOMY
 
 Currently, Snowsight supports updating MAX_CLUSTER_COUNT to a maximum of 10 clusters. To increase MAX_CLUSTER_COUNT beyond 10, use the ALTER WAREHOUSE command in SQL. You can increase or decrease the maximum and minimum number of clusters for a warehouse at any time, even while it is running and executing statements. 
 
-7️⃣ Warehouse a concurrency
 
-- Jeden warehouse:
-
-- obsługuje wiele zapytań
-- przy dużej liczbie → kolejka
-
-- Rozwiązania:
-
-- multi-cluster
-- więcej warehouse’ów
-- query acceleration (tylko świadomość istnienia)
 
 Monitorowanie wykorzystania warehousu:
 
