@@ -18,7 +18,7 @@ Snowflake uwielbia pytać o **Result Cache**. To mechanizm, który pozwala na n
     - A new query matches an old query - dokladnie 1:1, nawet case ma znaczenie, aliasy i wszystko,
 	* underlying data contributing to the query results remains unchanged. 
 	* The table micro-partitions have not changed as a result of clustering or consolidation. 
-	* The query makes no use of user-defined and external, or runtime functions. Note that queries that use the CURRENT DATE function are eligible for query result caching.?? nie wiem czy tak jest
+	* The query makes no use of user-defined and external, or runtime functions. 
 	
 - **Koszt:** Korzystanie z Result Cache jest **darmowe** (nie zużywa kredytów Warehouse).
 
