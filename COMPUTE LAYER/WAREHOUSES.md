@@ -67,40 +67,7 @@ Snowflake bardzo lubi pytania typu:
 
 👉 Bo local disk cache był pusty.
 
-Sa jeszcze 2 inne rodzaje cache.
 
-[[Query Result Cache]] (najważniejszy na egzaminie)
-
-🔹 Co to jest? = Cache wyników zapytań (gotowy wynik SELECTa).
-
-🔹 Kluczowe cechy (EGZAMIN 🔥)
-
-❄️ NIE zależy od warehouse
-
-❄️ NIE kosztuje compute
-
-❄️ Działa nawet na innym warehouse
-
-❄️ Działa nawet dla innego użytkownika
-
-⏱️ Domyślnie ważny 24h. Traci ważność jak zmienią się dane
-
-Kiedy Query Result Cache NIE zostanie użyty?
-
-❌ Dane źródłowe się zmieniły (INSERT / UPDATE / DELETE / MERGE)
-
-❌ Zapytanie nie jest identyczne (nawet inny alias!)
-
-❌ Używasz funkcji niedeterministycznych: CURRENT_TIMESTAMP, CURRENT_DATE, RANDOM()
-
-❌ Używasz RESULT_SCAN(LAST_QUERY_ID())
-
-3 cache: [[Remote Disk Cache]] → cache danych pomiędzy storage a warehouse, zarządzany przez Snowflake.
-
-- Nie jest przypisany do jednego warehouse
-- ❄️ Nie znika przy suspend warehouse
-- ❄️ Przyspiesza dostęp do często czytanych danych
-- Nie konfigurujesz go, jest zarzadzany automatycznie
 
 Warehouses are required for queries, as well as all DML operations, including loading data into tables. In addition to being defined by its type as either Standard (default, optimized for SQL, BI, ETL, DML) or Snowpark-optimized (optimized for memory-hravy jobs, obliczen, ma inne proporcje CPU do RAMu (wiecej pamieci), dobry do ML i obrobki danych, nie wymagany ale zalecany do snowpark), a warehouse is defined by its size.
 
