@@ -42,8 +42,6 @@ constant state micropartition oznacza ze nie może być już poprawione przez cl
 
 An existing clustering key is copied when a table is created using CREATE TABLE … CLONE. However, Automatic Clustering is [suspended for the cloned table](https://docs.snowflake.com/en/user-guide/object-clone.html#label-cloning-and-clustering-keys) and must be resumed.It is not copied when table is created using CREATE TABLE … AS SELECT; cluster key może być dropniety za pomoca komendy
 
-AUTOMATIC CLUSTERING
-
 Snowflake monitors and evaluates the tables to determine whether they would benefit from reclustering, and automatically reclusters them, as needed. You can suspend and resume Automatic Clustering for a clustered table at any time using ALTER TABLE … SUSPEND / RESUME RECLUSTER.![[Zrzut ekranu 2026-05-4 o 21.10.35.png]]
 
 
