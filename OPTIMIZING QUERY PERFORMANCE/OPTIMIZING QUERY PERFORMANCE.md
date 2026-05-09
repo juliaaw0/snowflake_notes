@@ -77,7 +77,7 @@ To "ciepłe" dane. Kiedy Warehouse pobiera dane z Cloud Storage (S3), zapisuje j
 - **Ważne:** Jeśli Warehouse zostanie uśpiony (Suspend), jego **Lokalny Cache zostaje wyczyszczony!** Po ponownym uruchomieniu Warehouse jest "zimny" i musi znów pobierać dane z chmury.
 
 
-### Konkurencyjność (Max Concurrency Level)
+### Max Concurrency Level
 
 **Ważność na egzaminie:** ⭐⭐⭐
 
