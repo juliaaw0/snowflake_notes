@@ -28,7 +28,7 @@ Na egzaminie mogą Cię zapytać, co da się sklonować.
 **Ważne:** Kiedy klonujesz bazę danych, Snowflake automatycznie klonuje wszystkie schematy i tabele wewnątrz niej.
 
 To jest klasyczny "haczyk". Niektóre obiekty **nie przechodzą** do klona:
-- **Internal Stages** - nie moga byc klonowane!!!!!!! Wynika to z faktu, że przechowują one fizyczne pliki na wewnętrznym systemie plików Snowflake'a, a mechanizm _Zero-copy cloning_ jest zaprojektowany głównie dla metadanych tabel (mikro-partycji), a nie dla surowych plików wewnątrz stage'a.
+- **Internal Stages** -- **Internal Stages** - Generalnie zasada jest że "nie mogą być klonowane'. Wynika to z faktu, że przechowują one fizyczne pliki na wewnętrznym systemie plików Snowflake'a, a mechanizm _Zero-copy cloning_ jest zaprojektowany głównie dla metadanych tabel (mikro-partycji), a nie dla surowych plików wewnątrz stage'a.  W praktycw: defaultowo komendą CLONE internal stage nie są kopiowane. Takim jakby wyjątkiem jest table stage, bo nowa sklonowana tabela dostanie table stage - ale jest on zawsze pusty. Żeby sklonować PUSTE internal stage, musisz jawnie dopisać frazę: `CREATE DATABASE klon CLONE oryginał INCLUDE INTERNAL STAGES. Ale i tak nigdy nie zostanie skopiowana ich zawartość bo sa to pliki a nie metadane. 
 - **Temporary Tables** (Tabele tymczasowe) – nie mogą być klonowane do stałych tabel.
 - **Shares** (Udostępnienia danych).
 - external tables 
