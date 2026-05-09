@@ -24,6 +24,7 @@ Na egzaminie mogą Cię zapytać, co da się sklonować.
 - **Tables** (Tabele)
  * file format, sequences, tasks
  * external stages
+ * pipes do internal objects
 **Ważne:** Kiedy klonujesz bazę danych, Snowflake automatycznie klonuje wszystkie schematy i tabele wewnątrz niej.
 
 To jest klasyczny "haczyk". Niektóre obiekty **nie przechodzą** do klona:
@@ -31,7 +32,7 @@ To jest klasyczny "haczyk". Niektóre obiekty **nie przechodzą** do klona:
 - **Temporary Tables** (Tabele tymczasowe) – nie mogą być klonowane do stałych tabel.
 - **Shares** (Udostępnienia danych).
 - external tables 
-- pipes
+- pipes do external objects
 - **Storage Integrations** (integracje z magazynem chmurowym).
 - Cloning does not copy the load metadata; therefore, any files previously loaded in the source table can be reloaded into the cloned table without any issues.
 
