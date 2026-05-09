@@ -137,12 +137,6 @@ Polityka prywatności (Differential Privacy) zawsze chroni sklonowany obiekt, al
 - jak kopiujemy całą scheme/baze (czyli i tabele i polityke ktora jest w schemie) to nowa tabela bedzie pointować do nowej polityki
 * jak tabela i polityka znajdują się w różnych miejscach, to klonowana jest tylko tabela i nowa tabela pointuje do starej polityki
 
-PRIVACY DOMAINS
-Wyobraź sobie, że masz ogromną bazę danych, w której są informacje o milionach transakcji. Niektóre z tych transakcji dotyczą tych samych osób (np. Jan Kowalski zrobił 10 zakupów).
-**Privacy Domain** definiuje, co jest "jednostką prywatności" (entity), którą chcemy chronić:
-- Czy chronimy **pojedynczą transakcję** (wiersz)?
-- Czy chronimy **konkretną osobę** (użytkownika), która stoi za wieloma wierszami?
-
 DATABASE ROLES
 You can clone a database role using the CREATE DATABASE ROLE … CLONE command if the database role doesn’t already exist in the target database.
 
