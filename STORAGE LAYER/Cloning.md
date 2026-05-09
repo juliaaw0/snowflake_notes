@@ -33,7 +33,6 @@ To jest klasyczny "haczyk". Niektóre obiekty **nie przechodzą** do klona:
 - external tables 
 - pipes
 - **Storage Integrations** (integracje z magazynem chmurowym).
-- **Shares** (udostępnione obiekty).
 - Cloning does not copy the load metadata; therefore, any files previously loaded in the source table can be reloaded into the cloned table without any issues.
 
 ### Uprawnienia (Privileges)
