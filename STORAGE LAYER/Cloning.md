@@ -101,7 +101,6 @@ Currently, when a database or schema that contains source tables and streams is 
 
 Jeśli masz Stream w oryginalnej bazie, który "widzi" 10 nowych wierszy, i zrobisz klon tej bazy, to sklonowany Stream w nowym miejscu będzie **pusty**.
 
-wróć tu jak nauczysz sie czym są streamy
 
 TASKS
 When a database or schema that contains tasks is cloned, the tasks in the clone are suspended by default.
